@@ -1,3 +1,4 @@
+// como eu deixo mais bonito ???
 let a,b,c ;
 a = 180 ;
 b = 0 ;
