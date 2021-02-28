@@ -1,7 +1,7 @@
 // ex 1
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// for(let i = 0; i < numbers.length - 1;i+=1){
+for(let i = 0; i < numbers.length - 1;i+=1){
   console.log(numbers[i]);
 }
 
@@ -18,3 +18,11 @@ let mediaArit = sum/numbers.length;
 console.log('a média aritmetica é '+mediaArit);
 
 // ex 4
+
+if(mediaArit > 20) {
+  console.log('valor é maior que 20');
+} else {
+  console.log('valor é menor que 20');
+}
+
+// ex 5
