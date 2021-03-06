@@ -1,33 +1,52 @@
-function decode(word) {
-  let changeWord = [];
-  let decondeWord = '';
-  for (let i = 0; i < word.length; i += 1) {
-    changeWord.push(word[i]);
-  }
-  for (let i = 0; i < changeWord.length; i += 1) {
-    if (changeWord[i] === '1') {
-      changeWord[i] = 'a';
-    } else if (changeWord[i] === '2') {
-      changeWord[i] = 'e';
-    } else if (changeWord[i] === '3') {
-      changeWord[i] = 'i';
-    } else if (changeWord[i] === '4') {
-      changeWord[i] = 'o';
-    } else if (changeWord[i] === '5') {
-      changeWord[i] = 'u';
+let phoneNumber = [1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+function intervalVerificator (phoneNumber) {
+  let interval = 0;
+  let isInCond = true;
+  for (let i = 0; i < phoneNumber.length ;i += 1) {
+    if ((phoneNumber[i] > 9) || (phoneNumber[i] < 0)) {
+      interval += 1
     }
   }
-  for (let i = 0; i < changeWord.length; i += 1) {
-    decondeWord += changeWord[i];
+  if (interval > 0) {
+    isInCond = false;
+  } else {
+    isInCond = true
   }
-  return decondeWord;
+  return isInCond
 }
-let test = '4l1 m5nd4';
-let u = decode(test);
-console.log(u);
+function repeatVerificator (phoneNumber) {
+  let reapt = 0;
+  let trueOrNot = '';
+  for(let i = 0; i < phoneNumber.length; i += 1) {
+    for (let j = 0; j < phoneNumber.length; j += 1) {
+      if (phoneNumber[i] === phoneNumber[j]) {
+        reapt += 1;
+      }
+    }
+    if (reapt > 2) {
+      trueOrNot = false;
+    }
+    reapt = 0;
+  }
+  return trueOrNot
+}
+function generatePhoneNumber(phoneNumber) {
+  let numberExt = '';
+  let interval = intervalVerificator(phoneNumber);
+  let moreThan3 = repeatVerificator(phoneNumber);
+  if (phoneNumber.length !== 11) {
+    numberExt = 'Array com tamanho incorreto.'
+  } else if (interval && moreThan3) {
+    numberExt = 'não é possível gerar um número de telefone com esses valores'
+  } else {
+    for(let i = 0; i < phoneNumber.length; i += 1) {
+      numberExt += phoneNumber[i];
+    }
+  }
+  return numberExt
+}
 
-
-
-
+let u = intervalVerificator(phoneNumber)
+console.log(u)
 
 
