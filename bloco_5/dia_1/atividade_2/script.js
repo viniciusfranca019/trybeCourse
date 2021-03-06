@@ -1,0 +1,12 @@
+let body = document.querySelector('body');
+body.style.backgroundColor = 'rgb( 66, 66, 66)';
+let emergenteEUrgente = document.querySelector('.emergency-tasks');
+emergenteEUrgente.style.backgroundColor = 'rgb( 112, 44, 112)';
+let urgenteImportante = document.querySelectorAll('.emergency-tasks h3')
+urgenteImportante[0].style.backgroundColor = 'yellow';
+urgenteImportante[1].style.backgroundColor = 'yellow';
+let noEmergenteEUrgente = document.querySelector('.no-emergency-tasks')
+noEmergenteEUrgente.style.backgroundColor = 'rgb( 18, 144, 101)';
+let noEmergenteUrgente = document.querySelectorAll('.no-emergency-tasks h3');
+noEmergenteUrgente[0].style.backgroundColor = 'grey';
+noEmergenteUrgente[1].style.backgroundColor = 'grey';
