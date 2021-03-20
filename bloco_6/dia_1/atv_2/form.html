@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTC-8">
+    <title>formulário</title>
+  </head>
+  <body>
+    <fieldset>
+      <label for="name">Nome :</label>
+      <input id="name" name="name" type="text" required maxlength="40"><br><br>
+      <label for="the-email">Email :</label>
+      <input id="the-email" type="email" required maxlength="50" name="the-email"><br><br>
+      <label for="cpf">CPF :</label>
+      <input id="cpf" required maxlength="11" name="cpf"><br><br>
+      <label for="endereco">Endereço :</label>
+      <input id="endereco" maxlength="200" required><br>
+      <label for="city">Cidade :</label>
+      <input id="city" required maxlength="28"><br><br>
+      <label for="estado">Estado :</label>
+      <select name="estados" id="estado" placeholder="Escolha um estado" required>
+      </select><br><br>
+      <label for="tipo">Tipo :</label>
+      <label for="ap">Apartamento</label><input name="ap" type="radio">
+      <label for="casa">Casa</label><input name="casa" type="radio"><br><br>
+    </fieldset>
+    <fieldset>
+      <label for="resumo">Resumo do currículo :</label><br><br>
+      <textarea id="resumo" cols="50" name="resumo" required maxlength="1000">
+      Escreva um resumo do seu currículo</textarea><br><br>
+      <label for="cargo">Cargo :</label>
+      <input required maxlength="40" name="cargo"><br><br>
+      <label for="descricao">Descrição do cargo</label>
+      <input required maxlength="500" name="descricao"><br><br>
+      <label for="data">Data de Inicio</label>
+      <input type="date" name="data" required>
+    </fieldset>
+    <script src="script.js"></script>
+  </body>
+</html>
