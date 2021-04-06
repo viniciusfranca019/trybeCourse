@@ -1,4 +1,4 @@
-const numbers = [32, 15, 3, 2, -5, 56, 10, 112];
+const numbers = [32, 15, 3, 2, 112, -5, 56, 10];
 
 // const biggerNumber = (arr) => {
 //   let biggerNumb = -100000000;
